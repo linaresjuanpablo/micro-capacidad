@@ -25,8 +25,6 @@ public class ListCapabilityUseCase implements IListCapabilityUseCase {
     private final IListCapabilityRepositoryPort iListCapabilityRepositoryPort;
     private final IListTecnologiaClientPort iListTecnologiaClientPort;
 
-
-
     @Override
     public Flux<ListCapabilityModel> list(Pageable pageable, SortBy sortBy) {
 
