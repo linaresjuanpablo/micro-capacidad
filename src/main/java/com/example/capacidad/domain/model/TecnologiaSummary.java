@@ -2,11 +2,12 @@ package com.example.capacidad.domain.model;
 
 import lombok.*;
 
-@Data
+//@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder(toBuilder = true)
 //@Setter
-//@Getter
+@Getter
 
 public class TecnologiaSummary {
 
