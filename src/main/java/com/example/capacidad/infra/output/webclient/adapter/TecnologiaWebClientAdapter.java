@@ -23,16 +23,16 @@ public class TecnologiaWebClientAdapter implements ITecnologiaClientPort {
     @Override
     public Mono<Boolean> existsById(Long tecnologiaId) {
         return tecnologiaWebClient
-                .get()
-                .uri("/api/tecnologias/{id}", tecnologiaId)
+                .post()
+                //.uri("/tecnologia/{id}", tecnologiaId)
+                .uri("/tecnologia/by-ids", tecnologiaId)
+                .bodyValue(List.of(tecnologiaId))
                 .retrieve()
                 .onStatus(HttpStatus.NOT_FOUND::equals, response -> Mono.empty())
                 .toBodilessEntity()
                 .map(r-> true)
                 .defaultIfEmpty(false);
     }
-
-
 
     @Override
     public Flux<TecnologiaSummary> findByIds(List<Long> ids) {

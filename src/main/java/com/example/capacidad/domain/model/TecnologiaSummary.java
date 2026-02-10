@@ -1,13 +1,12 @@
 package com.example.capacidad.domain.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Data
+//@Data
 @AllArgsConstructor
-@Setter
+@NoArgsConstructor
+@Builder(toBuilder = true)
+//@Setter
 @Getter
 
 public class TecnologiaSummary {
