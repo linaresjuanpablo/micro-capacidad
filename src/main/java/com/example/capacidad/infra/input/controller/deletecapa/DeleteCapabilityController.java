@@ -1,6 +1,6 @@
 package com.example.capacidad.infra.input.controller.deletecapa;
 
-import com.example.capacidad.application.useCase.deletecapa.DeleteCapabilityUseCase;
+import com.example.capacidad.application.usecase.deletecapa.DeleteCapabilityUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/capability")
@@ -23,9 +25,11 @@ public class DeleteCapabilityController {
 
 
     @DeleteMapping("/{id}")
-    public Mono<ResponseEntity<?>> deleteCapability(@PathVariable Long id){
+    public Mono<ResponseEntity<Map<String, String>>> deleteCapability(@PathVariable Long id){
         return deleteCapabilityUseCase.deleteCapability(id)
-                .then(Mono.just(ResponseEntity.noContent().build()));
+                .then(Mono.just(ResponseEntity.ok(
+                        Map.of("message", "La capacidad fue eliminada con éxito")
+                )));
 
     }
 }

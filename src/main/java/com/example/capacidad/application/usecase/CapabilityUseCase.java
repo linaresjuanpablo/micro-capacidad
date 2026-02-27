@@ -1,4 +1,4 @@
-package com.example.capacidad.application.useCase;
+package com.example.capacidad.application.usecase;
 
 import com.example.capacidad.domain.exception.DataAccessException;
 import com.example.capacidad.domain.exception.DuplicateResourceException;
@@ -59,7 +59,6 @@ public class CapabilityUseCase implements ICreateCapabilityUseCase {
                     ));
                 });
     }
-
     public Mono<CapabilityModel> validateCapa(CapabilityModel capabilityModel) {
 
         if (capabilityModel.getName() == null || capabilityModel.getName().isBlank()) {
@@ -92,7 +91,7 @@ public class CapabilityUseCase implements ICreateCapabilityUseCase {
         // Validar unicidad por nombre
         return iCapabilityRepositoryPor.existsByName(capabilityModel.getName())
                 .flatMap(existing -> {
-                    if (existing) {
+                    if (Boolean.TRUE.equals(existing)) {
                         log.warn("Ya existe la capacidad: {}", capabilityModel.getName());
                         return Mono.<CapabilityModel>error(
                                 new DuplicateResourceException(

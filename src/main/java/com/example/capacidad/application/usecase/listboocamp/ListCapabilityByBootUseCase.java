@@ -1,6 +1,5 @@
-package com.example.capacidad.application.useCase.listboocamp;
+package com.example.capacidad.application.usecase.listboocamp;
 
-import com.example.capacidad.domain.model.CapabilityModel;
 import com.example.capacidad.domain.model.listbootcamp.CapabilityByBootModel;
 import com.example.capacidad.domain.ports.in.listbootcamp.IListCapabilityByBootUseCase;
 import com.example.capacidad.domain.ports.out.listbootcamp.IListCapabilityRepositoryByBootPort;

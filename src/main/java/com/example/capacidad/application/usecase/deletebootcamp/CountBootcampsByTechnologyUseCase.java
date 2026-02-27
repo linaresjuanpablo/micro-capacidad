@@ -1,4 +1,4 @@
-package com.example.capacidad.application.useCase.deletebootcamp;
+package com.example.capacidad.application.usecase.deletebootcamp;
 
 import com.example.capacidad.domain.ports.in.deletebootcamp.ICountBootcampsByTechnologyUseCase;
 import com.example.capacidad.domain.ports.out.deletebootcamp.ITechnologyCountRepositoryPort;

@@ -1,4 +1,4 @@
-package com.example.capacidad.application.useCase.deletecapa;
+package com.example.capacidad.application.usecase.deletecapa;
 
 import com.example.capacidad.domain.ports.out.deletecapa.IDeleteCapabilityRepositoryPort;
 import lombok.RequiredArgsConstructor;

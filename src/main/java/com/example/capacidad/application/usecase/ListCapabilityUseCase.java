@@ -1,4 +1,4 @@
-package com.example.capacidad.application.useCase;
+package com.example.capacidad.application.usecase;
 
 
 import com.example.capacidad.domain.model.ListCapabilityModel;
