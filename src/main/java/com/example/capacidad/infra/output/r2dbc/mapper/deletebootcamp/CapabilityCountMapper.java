@@ -1,7 +1,7 @@
 package com.example.capacidad.infra.output.r2dbc.mapper.deletebootcamp;
 
 import com.example.capacidad.domain.model.deletebootcamp.CapabilityCountBootcampModel;
-import com.example.capacidad.infra.input.dto.deletebootcamp.CapabilityBootcampCountResponse;
+import com.example.capacidad.infra.input.dto.CapabilityBootcampCountResponse;
 import com.example.capacidad.infra.output.r2dbc.entity.deletebootcamp.R2CapabilityCountBootcampEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

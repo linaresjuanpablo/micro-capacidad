@@ -59,7 +59,6 @@ public class CapabilityUseCase implements ICreateCapabilityUseCase {
                     ));
                 });
     }
-
     public Mono<CapabilityModel> validateCapa(CapabilityModel capabilityModel) {
 
         if (capabilityModel.getName() == null || capabilityModel.getName().isBlank()) {
